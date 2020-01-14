@@ -148,6 +148,10 @@ public class TabelaOS {
         this.TipoManutencao = TipoManutencao;
     }
 
+    
+    public void abobrinha(){
+        
+    }
 
     
     
