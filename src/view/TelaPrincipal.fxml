@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import CurrencyField.?>-->
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--<?import view.CurrencyField?>-->
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPanePrincipal" prefHeight="893.0" prefWidth="1507.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaPrincipalController">
+   <children>
+      <SplitPane dividerPositions="0.2093987560469938" layoutX="474.0" layoutY="265.0" prefHeight="893.0" prefWidth="1451.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="891.0" prefWidth="400.0" style="-fx-background-color: #fff646;">
+               <children>
+                  <AnchorPane layoutX="1.0" layoutY="46.0" minHeight="0.0" minWidth="0.0" prefHeight="891.0" prefWidth="298.0" style="-fx-background-color: #2E9AFE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <TextField fx:id="txt_dtinicio" layoutX="34.0" layoutY="90.0" onKeyTyped="#inputDataKeyTypedDataInicial" prefHeight="39.0" prefWidth="224.0" promptText="Início DD/MM/AAAA" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.0" />
+                        <TextField fx:id="txt_dtfim" layoutX="34.0" layoutY="137.0" onKeyTyped="#inputDataKeyTypedDataFinal" prefHeight="39.0" prefWidth="224.0" promptText="Fim DD/MM/AAAA" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.0" />
+                        <JFXButton fx:id="btn_atualizar" buttonType="RAISED" layoutX="37.0" layoutY="210.0" onAction="#atualizarTabela" prefHeight="39.0" prefWidth="224.0" ripplerFill="#1448bad1" style="-fx-background-color: #F9DD16;" text="Atualizar" textAlignment="CENTER" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.0" />
+                        <JFXButton fx:id="btn_excel" buttonType="RAISED" layoutX="37.0" layoutY="280.0" onAction="#GeraExcel" prefHeight="39.0" prefWidth="224.0" ripplerFill="#1331b5e3" style="-fx-background-color: #F9DD16;" text="Exportar EXCEL" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.0" />
+                        <AnchorPane layoutY="-2.0" prefHeight="39.0" prefWidth="298.0" style="-fx-background-color: fff646;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TextField fx:id="txtChave" editable="false" layoutY="17.0" maxHeight="54.0" prefHeight="29.0" prefWidth="203.0" style="-fx-background-color: #fff646;" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </TextField>
+                              <TextField editable="false" prefHeight="29.0" prefWidth="69.0" style="-fx-background-color: #fff646;" text="#interna" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Open Sans Bold" size="13.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fx:id="imageView" fitHeight="314.0" fitWidth="279.0" layoutX="114.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="891.0" prefWidth="1218.0">
+               <children>
+                  <AnchorPane layoutY="-10.0" prefHeight="115.0" prefWidth="1158.0" style="-fx-background-color: #fff646;" AnchorPane.bottomAnchor="786.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TabPane fx:id="tabPane" layoutY="104.0" prefHeight="788.0" prefWidth="1158.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <tabs>
+                      <Tab fx:id="tabInformacoes" text="Gerencial">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="127.0" layoutY="120.0" prefHeight="759.0" prefWidth="863.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <TableView fx:id="tb_os" layoutX="43.0" layoutY="28.0" prefHeight="696.0" prefWidth="1098.0" tableMenuButtonVisible="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                                             <columns>
+                                                <TableColumn fx:id="col_os" prefWidth="75.0" text="OS" />
+                                                <TableColumn fx:id="col_AnoOS" prefWidth="75.0" text="AnoOS" />
+                                                <TableColumn fx:id="col_NumeroOS" prefWidth="75.0" text="NumeroOS" />
+                                                <TableColumn fx:id="col_NumeroBem" prefWidth="75.0" text="Bem" />
+                                                <TableColumn fx:id="col_Status" prefWidth="75.0" text="Status" />
+                                                <TableColumn fx:id="col_Prefixo" prefWidth="75.0" text="Prefixo" />
+                                                <TableColumn fx:id="col_SB" prefWidth="75.0" text="SB" />
+                                                <TableColumn fx:id="col_NomeDependencia" prefWidth="75.0" text="NomeDependencia" />
+                                                <TableColumn fx:id="col_ProblemaApresentado" prefWidth="75.0" text="ProblemaApresentado" />
+                                                <TableColumn fx:id="col_DataHoraAbertura" prefWidth="75.0" text="DataHoraAbertura" />
+                                                <TableColumn fx:id="col_UF" prefWidth="75.0" text="UF" />
+                                                <TableColumn fx:id="col_NumeroContrato" prefWidth="75.0" text="NumeroContrato" />
+                                                <TableColumn fx:id="col_Fornecedor" prefWidth="75.0" text="Fornecedor" />
+                                                <TableColumn fx:id="col_NrSOL" prefWidth="75.0" text="NrSOL" />
+                                                <TableColumn fx:id="col_TipoManutencao" prefWidth="75.0" text="TipoManutencao" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                      </Tab>
+                      <Tab fx:id="tab_ParcelamentoFatura" onSelectionChanged="#selecionaAtribuicao" text="Atribuição de Estados">
+                           <content>
+                              <AnchorPane fx:id="AP_ParcelamentoFatura" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                      </Tab>
+                        <Tab fx:id="tab_BloqueioRestricao" onSelectionChanged="#osAbertas" text="OS Abertas">
+                           <content>
+                              <AnchorPane fx:id="AP_OS" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane layoutX="240.0" layoutY="189.0" prefHeight="743.0" prefWidth="1185.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <AnchorPane fx:id="AP_OS" />
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

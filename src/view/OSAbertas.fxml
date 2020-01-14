@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="759.0" prefWidth="1109.0" style="-fx-background-color: #00BFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OSAbertasController">
+   <children>
+      <TableView fx:id="tb_os" layoutX="5.0" layoutY="26.0" prefHeight="527.0" prefWidth="1075.0" tableMenuButtonVisible="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <columns>
+            <TableColumn fx:id="col_os" prefWidth="75.0" text="OS" />
+            <TableColumn fx:id="col_NumeroBem" prefWidth="75.0" text="Bem" />
+            <TableColumn fx:id="col_Status" prefWidth="75.0" text="Status" />
+            <TableColumn fx:id="col_Prefixo" prefWidth="75.0" text="Prefixo" />
+            <TableColumn fx:id="col_SB" prefWidth="75.0" text="SB" />
+            <TableColumn fx:id="col_NomeDependencia" prefWidth="75.0" text="NomeDependencia" />
+            <TableColumn fx:id="col_ProblemaApresentado" prefWidth="75.0" text="ProblemaApresentado" />
+            <TableColumn fx:id="col_DataHoraAbertura" prefWidth="75.0" text="DataHoraAbertura" />
+            <TableColumn fx:id="col_UF" prefWidth="75.0" text="UF" />
+            <TableColumn fx:id="col_NumeroContrato" prefWidth="75.0" text="NumeroContrato" />
+            <TableColumn fx:id="col_Fornecedor" prefWidth="75.0" text="Fornecedor" />
+            <TableColumn fx:id="col_NrSOL" prefWidth="75.0" text="NrSOL" />
+            <TableColumn fx:id="col_TipoManutencao" prefWidth="75.0" text="TipoManutencao" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="btn_excel" buttonType="RAISED" layoutX="872.0" layoutY="644.0" onAction="#GeraExcel" ripplerFill="#1331b5e3" style="-fx-background-color: #F9DD16;" text="Exportar EXCEL" />
+   </children>
+</AnchorPane>
